@@ -1,149 +1,170 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEVEL UP INDUSTRY - Pwodwi</title> <style>
-        .product-container {
-            /* Santre tout kat pwodwi yo */
-            text-align: center;
-            padding: 10px 0; /* Redwi espas vètikal la */
-        }
-        .product-card {
-            display: inline-block;
-            /* CHanjman lajè a pou 2 kat ka rantre kòt a kòt sou telefòn */
-            width: 45%; 
-            max-width: 350px; 
-            margin: 10px 5px; /* Redwi espas vètikal ak orizontal anviwon kat la */
-            padding: 10px; /* Redwi padding anndan kat la */
-            border: 2px solid #e1d5e6; 
-            border-radius: 12px;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6); /* Lonbraj pi piti */
-            vertical-align: top;
-            background-color: #1a1a1a; 
-             font-size: 0.85em; /* Redwi tout gwosè font la nan kat la */
-        }
-        .product-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 5px; /* Espas pi piti anba imaj la */
-        }
-        .product-card h3 {
-            font-size: 1em; /* Asire w ke tit la pa twò gwo */
-             margin-top: 5px;
-        }
-        .product-card p {
-             margin-top: 5px;
-             margin-bottom: 5px;
-        }
-        .whatsapp-button-main {
-            margin-bottom: 30px; /* Redwi espas anba bouton WhatsApp la */
-            margin-top: 20px;
-        }
-        /* Pou gwo ekran, kenbe li menm jan an */
-        @media (min-width: 768px) {
-            .product-card {
-                width: 30%; /* 3 sou yon liy */
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEVEL UP INDUSTRY - Pwodwi</title> 
+<style>
+/* --- CSS KOREKTE POU 2 KOLÒN AK BON ESPAS --- 
+   Mwen sèvi ak Flexbox pou asire aliyman ak santreman kòrèk.
+*/
+.product-container {
+    display: flex; /* Aktive Flexbox */
+    flex-wrap: wrap; /* Pèmèt liy yo kase an 2 liy */
+    justify-content: center; /* Santre liy pwodwi yo nan mitan */
+    gap: 10px; /* Ajoute yon ti espas ant kat yo (vètikal ak orizontal) */
+    padding: 10px 0; 
+    max-width: 100%; /* Asire w li pran tout lajè ki posib */
+    margin: 0 auto; /* Santre tout kontènè a */
+}
+.product-card {
+    /* Lajè pou fè 2 kat antre kòt a kòt. Nou bezwen mwens ke 50% */
+    width: 45%; 
+    max-width: 350px; 
+    margin: 10px 0; /* Nou retire margin bò kote yo epi nou itilize gap */
+    padding: 10px; 
+    border: 2px solid #e1d5e6; 
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6); 
+    background-color: #1a1a1a; 
+    font-size: 0.85em; 
+    text-align: center; 
+}
+/* --- Lòt CSS yo rete menm jan an --- */
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 5px; 
+}
+.product-card h3 {
+    font-size: 1em; 
+    margin-top: 5px;
+}
+.product-card p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.whatsapp-button-main {
+    margin-bottom: 30px; 
+    margin-top: 20px;
+}
+/* Pou gwo ekran (Desktop), kenbe l 2 pa 2 toujou ak yon ti espas anplis */
+@media (min-width: 768px) {
+    .product-card {
+        width: 35%; /* Lè l pi gwo, nou ka bay li yon lajè pi piti */
+        max-width: 350px;
+    }
+}
+</style>
 </head>
 <body style="background-color: black; color: white; font-family: Arial, sans-serif; text-align: center;"> 
-    
+
+<img 
+src="WhatsApp Image 2025-10-08 at 9.30.42 PM.jpeg" 
+alt="Logo de LEVEL UP INDUSTRY" 
+style="display: block; margin: 30px auto 10px auto; max-width: 250px; height: auto;" />
+
+<p style="margin-bottom: 30px; font-size: 1em;">DEKOUVRI PWODWI NOU YO KI PRAL MONTE NIVO W!</p>
+
+<div class="product-container">
+
+<div class="product-card">
     <img 
-        src="WhatsApp Image 2025-10-08 at 9.30.42 PM.jpeg" 
-        alt="Logo de LEVEL UP INDUSTRY" 
-        style="display: block; margin: 30px auto 10px auto; max-width: 250px; height: auto;" />
-    
-    <p style="margin-bottom: 30px; font-size: 1em;">DEKOUVRI PWODWI NOU YO KI PRAL MONTE NIVO W!</p>
-
-    <div class="product-container">
-    
-        <div class="product-card">
-            <img 
-                src="bous.jpeg" 
-                alt="Foto yon bous eksklizif Level Up" 
-            />
-            <h3 style="color: #25D366; margin-top: 0;">Bous Klasik</h3>
-            <p style="font-size: 0.9em;">Nou gen koulè nwa ak mawon.</p>
-            <p style="font-size: 1.2em; font-weight: bold; color: white;">Prix : 500 HTG</p>
-            
-            <a 
-                href="https://wa.me/50940367607?text=M%20vle%20achte%20bous%20klasik%20la%20nan%20500%20HTG." 
-                target="_blank" 
-                style="display: block; padding: 6px 10px; background-color: #050007; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px; font-weight: bold; font-size: 0.9em;" >
-                Kòmande kounye a
-            </a>
-        </div>
-        
-        <div class="product-card">
-            <img 
-                src="Portecle.jpeg" 
-                alt="Foto yon pòt-kle Level Up solid" 
-            />
-            <h3 style="color: #25D366; margin-top: 0;">Porte-clé Level Up</h3>
-            <p style="font-size: 0.9em;">Gen youn ki gen Tay zong ak yon lòt ki gen kle boutèy.</p>
-            <p style="font-size: 1.2em; font-weight: bold; color: white;">Prix : 150 HTG</p>
-            
-            <a 
-                href="https://wa.me/50940367607?text=M%20vle%20achte%20pòt-kle%20a%20nan%2030%20HTG." 
-                target="_blank" 
-                style="display: block; padding: 6px 10px; background-color: #0c0111; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px; font-weight: bold; font-size: 0.9em;"
-            >
-                Kòmande kounye a
-            </a>
-        </div>
-
-        <div class="product-card">
-            <img 
-                src="phone_holder_final.jpeg" 
-                alt="Support de téléphone réglable Level Up" 
-            />
-            <h3 style="color: #25D366; margin-top: 0;">Phone Holder - Support Téléphone</h3>
-            <p style="font-size: 0.9em;">Ajustable, solide, ak trè pratik.</p>
-            <p style="font-size: 1.2em; font-weight: bold; color: white;">Prix : 750 HTG</p>
-            
-            <a 
-                href="https://wa.me/50940357607?text=M%20vle%20achte%20Phone%20Holder%20la%20nan%20750%20HTG." 
-                target="_blank" 
-                style="display: block; padding: 6px 10px; background-color: #0c0111; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px; font-weight: bold; font-size: 0.9em;"
-            >
-                Kòmande kounye a
-            </a>
-        </div>
-        
-        <div style="display: inline-block; width: 45%; max-width: 350px; margin: 0 5px;"></div>
-    </div>
-    <p style="margin: 30px auto 10px; font-size: 1.2em; max-width: 80%;">
-        Ou Prêt pou w monte nivo?  
-    </p>
-
+    src="bous.jpeg" 
+    alt="Foto yon bous eksklizif Level Up" 
+    />
+    <h3 style="color: #25D366; margin-top: 0;">Bous Klasik</h3>
+    <p style="font-size: 0.9em;">Nou gen koulè nwa ak mawon.</p>
+    <p style="font-size: 1.2em; font-weight: bold; color: white;">Prix : 500 HTG</p>
     <a 
-        href="https://wa.me/50940357607?text=Bonjour!%20Je%20suis%20intéressé(e)%20par%20vos%20produits." 
-        target="_blank" 
-        class="whatsapp-button-main"
-        style="
-            display: inline-flex;
-            align-items: center;
-            padding: 12px 25px; 
-            background-color: #25D366; 
-            color: white;
-            text-decoration: none;
-            border-radius: 8px; 
-            font-weight: bold;
-            font-size: 1.2em;
-        "
-    >
-        KONTAKTE NOU VIA WHATSAPP 
-        <img 
-            src="iconewhatsapp.png" 
-            alt="Icône WhatsApp" 
-            style="width: 20px; height: 20px; margin-left: 10px; vertical-align: middle;"
-        />
+    href="https://wa.me/50940367607?text=M%20vle%20achte%20bous%20klasik%20la%20nan%20500%20HTG." 
+    target="_blank" 
+    style="display: block; padding: 6px 10px; background-color: #050007; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px; font-weight: bold; font-size: 0.9em;" >
+    Kòmande kounye a
     </a>
+</div>
 
-    <p style="margin-top: 10px;"> Oswa rele nou dirèk nan : +509 4035 7607</p>
+<div class="product-card">
+    <img 
+    src="Portecle.jpeg" 
+    alt="Foto yon pòt-kle Level Up solid" 
+    />
+    <h3 style="color: #25D366; margin-top: 0;">Porte-clé Level Up</h3>
+    <p style="font-size: 0.9em;">Gen youn ki gen Tay zong ak yon lòt ki gen kle boutèy.</p>
+    <p style="font-size: 1.2em; font-weight: bold; color: white;">Prix : 30 HTG</p>
+    <a 
+    href="https://wa.me/50940367607?text=M%20vle%20achte%20pòt-kle%20a%20nan%2030%20HTG." 
+    target="_blank" 
+    style="display: block; padding: 6px 10px; background-color: #0c0111; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px; font-weight: bold; font-size: 0.9em;"
+    >
+    Kòmande kounye a
+    </a>
+</div>
+
+<div class="product-card">
+    <img 
+    src="phone_holder_final.jpeg" 
+    alt="Support de téléphone réglable Level Up" 
+    />
+    <h3 style="color: #25D366; margin-top: 0;">Phone Holder - Support Téléphone</h3>
+    <p style="font-size: 0.9em;">Ajustable, solide, ak trè pratik.</p>
+    <p style="font-size: 1.2em; font-weight: bold; color: white;">Prix : 750 HTG</p>
+    <a 
+    href="https://wa.me/50940357607?text=M%20vle%20achte%20Phone%20Holder%20la%20nan%20750%20HTG." 
+    target="_blank" 
+    style="display: block; padding: 6px 10px; background-color: #0c0111; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px; font-weight: bold; font-size: 0.9em;"
+    >
+    Kòmande kounye a
+    </a>
+</div>
+
+<div class="product-card">
+    <img 
+    src="Chargeur telephonique.jpeg" 
+    alt="Chargeur telephonique" 
+    />
+    <h3 style="color: #25D366; margin-top: 0;">Chargeur telephonique</h3>
+    <p style="font-size: 0.9em;">Yon chajè rapid pou tout telefòn.</p>
+    <p style="font-size: 1.2em; font-weight: bold; color: white;">Prix : 500 HTG</p>
+    <a 
+    href="https://wa.me/50940357607?text=M%20vle%20achte%20Chargeur%20telephonique%20la%20nan%20500%20HTG." 
+    target="_blank" 
+    style="display: block; padding: 6px 10px; background-color: #0c0111; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px; font-weight: bold; font-size: 0.9em;"
+    >
+    Kòmande kounye a
+    </a>
+</div>
+
+</div> <p style="margin: 30px auto 10px; font-size: 1.2em; max-width: 80%;">
+Ou Prêt pou w monte nivo?  
+</p>
+
+<a 
+href="https://wa.me/50940357607?text=Bonjour!%20Je%20suis%20intéressé(e)%20par%20vos%20produits." 
+target="_blank" 
+class="whatsapp-button-main"
+style="
+           display: inline-flex;
+           align-items: center;
+           padding: 12px 25px; 
+           background-color: #25D366; 
+           color: white;
+           text-decoration: none;
+           border-radius: 8px; 
+           font-weight: bold;
+           font-size: 1.2em;
+"
+>
+KONTAKTE NOU VIA WHATSAPP 
+<img 
+src="iconewhatsapp.png" 
+alt="Icône WhatsApp" 
+style="width: 20px; height: 20px; margin-left: 10px; vertical-align: middle;"
+/>
+</a>
+
+<p style="margin-top: 10px;"> Oswa rele nou dirèk nan : +509 4035 7607</p>
 
 </body>
 </html>
